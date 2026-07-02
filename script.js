@@ -1,7 +1,7 @@
 const nav = document.querySelector(".nav-shell");
 const navToggle = document.querySelector(".nav-toggle");
 const navToggleLabel = navToggle?.querySelector(".sr-only");
-const navLinks = document.querySelectorAll(".nav-links a, .nav-cta");
+const navLinks = document.querySelectorAll(".nav-links a, .nav-actions a");
 const contactForm = document.querySelector(".contact-form");
 const formStatus = document.querySelector(".form-status");
 

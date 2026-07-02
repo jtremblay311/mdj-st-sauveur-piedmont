@@ -131,6 +131,7 @@ p {
 .two-column,
 .contact-grid,
 .footer-grid,
+.nav-actions,
 .cta-shell,
 .facebook-shell {
   min-width: 0;
@@ -204,6 +205,13 @@ p {
   outline: none;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex: 0 0 auto;
+}
+
 .nav-cta,
 .btn {
   display: inline-flex;
@@ -228,6 +236,25 @@ p {
   box-shadow: 0 10px 28px rgba(238, 46, 49, 0.2);
 }
 
+.nav-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  min-height: 46px;
+  padding: 0.72rem 0.85rem;
+  border: 1px solid rgba(29, 120, 116, 0.26);
+  border-radius: var(--radius);
+  color: var(--teal-dark);
+  background: rgba(255, 255, 255, 0.78);
+  font-size: 0.92rem;
+  font-weight: 900;
+  line-height: 1.15;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background-color 180ms ease, color 180ms ease;
+}
+
 .btn-primary {
   color: var(--surface);
   background: var(--red);
@@ -248,10 +275,20 @@ p {
 .btn:hover,
 .btn:focus-visible,
 .nav-cta:hover,
-.nav-cta:focus-visible {
+.nav-cta:focus-visible,
+.nav-social-link:hover,
+.nav-social-link:focus-visible {
   transform: translateY(-1px);
   outline: 3px solid rgba(238, 46, 49, 0.22);
   outline-offset: 2px;
+}
+
+.nav-social-link:hover,
+.nav-social-link:focus-visible {
+  border-color: rgba(238, 46, 49, 0.34);
+  color: var(--red-dark);
+  background: var(--surface);
+  box-shadow: 0 10px 24px rgba(7, 30, 34, 0.08);
 }
 
 .nav-toggle {
@@ -775,6 +812,18 @@ p {
   max-width: 660px;
 }
 
+.social-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  justify-content: flex-end;
+}
+
+.btn-social-alt {
+  border-color: rgba(244, 192, 149, 0.5);
+  background: rgba(255, 255, 255, 0.88);
+}
+
 .final-cta {
   text-align: center;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(223, 242, 239, 0.68));
@@ -1034,6 +1083,16 @@ address strong,
   font-weight: 800;
 }
 
+.footer-socials {
+  display: grid;
+  gap: 0.45rem;
+  justify-items: start;
+}
+
+.footer-socials + .small {
+  margin-top: 0.9rem;
+}
+
 .footer-signature {
   margin-top: 2.5rem;
   padding: 1.25rem 1rem 1.4rem;
@@ -1127,7 +1186,7 @@ address strong,
   }
 
   .nav-links,
-  .nav-cta {
+  .nav-actions {
     display: none;
   }
 
@@ -1153,15 +1212,22 @@ address strong,
     animation: mobileMenuIn 180ms ease both;
   }
 
-  .nav-shell.is-open .nav-cta {
-    display: inline-flex;
+  .nav-shell.is-open .nav-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
     flex: 0 0 100%;
     width: 100%;
+    gap: 0.45rem;
     order: 4;
     margin-left: 0;
     margin-top: 0.15rem;
-    min-height: 44px;
     animation: mobileMenuIn 200ms ease both;
+  }
+
+  .nav-shell.is-open .nav-cta,
+  .nav-shell.is-open .nav-social-link {
+    width: 100%;
+    min-height: 44px;
   }
 
   .nav-links a {
@@ -1281,6 +1347,7 @@ address strong,
   }
 
   .nav-cta,
+  .nav-social-link,
   .btn {
     min-height: 44px;
     padding: 0.72rem 0.9rem;
@@ -1289,7 +1356,8 @@ address strong,
   .hero-actions .btn,
   .cta-actions .btn,
   .section-actions .btn,
-  .facebook-shell .btn {
+  .facebook-shell .btn,
+  .social-actions .btn {
     width: 100%;
   }
 
@@ -1420,6 +1488,12 @@ address strong,
     gap: 1rem;
   }
 
+  .social-actions {
+    flex-direction: column;
+    justify-content: stretch;
+    gap: 0.65rem;
+  }
+
   .experience-marker {
     padding: 0.62rem;
     font-size: 0.9rem;
@@ -1471,6 +1545,10 @@ address strong,
 
   .footer-grid {
     gap: 1.15rem;
+  }
+
+  .footer-socials {
+    gap: 0.35rem;
   }
 
   .footer-grid > div {
