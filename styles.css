@@ -38,7 +38,7 @@ html {
 
 body {
   margin: 0;
-  min-width: 320px;
+  min-width: 0;
   overflow-x: clip;
 }
 
@@ -286,10 +286,17 @@ p {
   width: 100%;
   max-width: 760px;
   margin-bottom: 1rem;
-  font-size: clamp(2.35rem, 5.5vw, 4.15rem);
+  font-size: clamp(2.3rem, 5.25vw, 4.05rem);
   line-height: 1.03;
   letter-spacing: 0;
   overflow-wrap: anywhere;
+}
+
+.hero-title-nowrap {
+  display: inline-block;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: keep-all;
 }
 
 .page-hero h1 {
@@ -1233,7 +1240,8 @@ address strong,
 
   .hero-copy h1,
   .page-hero h1 {
-    font-size: clamp(1.82rem, 9.5vw, 2.55rem);
+    font-size: clamp(1.65rem, 8.2vw, 2.15rem);
+    line-height: 1.08;
   }
 
   .hero-text,
