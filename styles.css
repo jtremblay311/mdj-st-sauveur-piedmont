@@ -28,6 +28,7 @@ html {
     linear-gradient(180deg, #f2fbfa 0%, #eef7f6 45%, #f7fbfb 100%);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.5;
+  overflow-x: clip;
   scroll-behavior: smooth;
 }
 
@@ -38,6 +39,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
+  overflow-x: clip;
 }
 
 img {
@@ -54,6 +56,15 @@ h1,
 h2,
 h3 {
   margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+.brand span,
+.btn {
+  overflow-wrap: break-word;
 }
 
 p {
@@ -169,11 +180,13 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  max-width: 100%;
   min-height: 46px;
   padding: 0.85rem 1.05rem;
   border: 2px solid transparent;
   border-radius: var(--radius);
   font-weight: 800;
+  text-align: center;
   text-decoration: none;
   cursor: pointer;
 }
@@ -270,19 +283,23 @@ p {
 }
 
 .hero-copy h1 {
+  width: 100%;
   max-width: 760px;
   margin-bottom: 1rem;
   font-size: clamp(2.35rem, 5.5vw, 4.15rem);
   line-height: 1.03;
   letter-spacing: 0;
+  overflow-wrap: anywhere;
 }
 
 .page-hero h1 {
+  width: 100%;
   max-width: 760px;
   margin-bottom: 1rem;
   font-size: clamp(2.35rem, 7vw, 4.8rem);
   line-height: 0.97;
   letter-spacing: 0;
+  overflow-wrap: anywhere;
 }
 
 .hero-text,
@@ -403,6 +420,10 @@ p {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.activities-section {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(242, 251, 250, 0.96));
+}
+
 .activity-card,
 .value-card,
 .sponsor-card,
@@ -427,12 +448,13 @@ p {
 
 .activity-card {
   position: relative;
-  min-height: 282px;
+  min-height: 220px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  border-top: 4px solid var(--card-accent, var(--red));
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.96), var(--card-bg, rgba(223, 242, 239, 0.72))),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), var(--card-bg, rgba(223, 242, 239, 0.42))),
     var(--surface);
 }
 
@@ -441,11 +463,11 @@ p {
   position: absolute;
   right: -32px;
   top: -32px;
-  width: 92px;
-  height: 92px;
+  width: 78px;
+  height: 78px;
   border-radius: 50%;
   background: rgba(238, 46, 49, 0.12);
-  background: color-mix(in srgb, var(--card-accent, var(--red)) 18%, transparent);
+  background: color-mix(in srgb, var(--card-accent, var(--red)) 10%, transparent);
 }
 
 .activity-card:nth-child(1) {
@@ -483,7 +505,6 @@ p {
   --card-bg: rgba(238, 46, 49, 0.08);
 }
 
-.activity-card:hover,
 .value-card:hover,
 .sponsor-card:hover,
 .feature-panel:hover,
@@ -496,6 +517,16 @@ p {
   transform: translateY(-4px);
   border-color: rgba(29, 120, 116, 0.3);
   box-shadow: 0 20px 44px rgba(7, 30, 34, 0.13);
+}
+
+.activity-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(29, 120, 116, 0.32);
+  border-top-color: var(--card-accent, var(--red));
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.98), var(--card-bg, rgba(223, 242, 239, 0.66))),
+    var(--surface);
+  box-shadow: 0 18px 36px rgba(7, 30, 34, 0.12);
 }
 
 .value-card:hover,
@@ -518,7 +549,7 @@ p {
   z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 1rem;
   margin-bottom: 1rem;
 }
@@ -531,15 +562,21 @@ p {
   font-size: 1.18rem;
 }
 
+.activity-card p {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0;
+}
+
 .activity-symbol {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 46px;
+  height: 46px;
   border: 2px solid var(--line);
   border: 2px solid color-mix(in srgb, var(--card-accent, var(--red)) 34%, white);
-  border-radius: 50%;
+  border-radius: 14px;
   color: var(--surface);
   background: var(--card-accent, var(--red));
   font-size: 0.88rem;
@@ -961,22 +998,39 @@ address strong,
 
 .footer-signature a {
   display: inline-block;
+  position: relative;
+  padding-bottom: 0.12em;
   color: #ffffff;
   font-weight: 800;
-  text-decoration-line: underline;
-  text-decoration-color: var(--red);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.28em;
-  transition: color 180ms ease, text-decoration-color 180ms ease, text-underline-offset 180ms ease;
+  line-height: 1.25;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.footer-signature a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.12em;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--red);
+  transform: translateY(0);
+  transition: background-color 180ms ease, transform 180ms ease;
 }
 
 .footer-signature a:hover,
 .footer-signature a:focus-visible {
   color: #ffffff;
-  text-decoration-color: var(--peach);
-  text-underline-offset: 0.34em;
   outline: 3px solid rgba(238, 46, 49, 0.28);
   outline-offset: 5px;
+}
+
+.footer-signature a:hover::after,
+.footer-signature a:focus-visible::after {
+  background: var(--peach);
+  transform: translateY(2px);
 }
 
 @media (max-width: 1040px) {
@@ -985,12 +1039,25 @@ address strong,
   }
 
   .nav-shell {
+    position: relative;
     flex-wrap: wrap;
-    padding: 0.7rem 0;
+    gap: 0.65rem;
+    padding: 0.7rem 0 0.85rem;
   }
 
   .nav-toggle {
     display: inline-block;
+    flex: 0 0 auto;
+    transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+  }
+
+  .nav-shell.is-open .nav-toggle {
+    border-color: var(--teal-dark);
+    background: var(--teal-dark);
+  }
+
+  .nav-shell.is-open .nav-toggle span:not(.sr-only) {
+    background: var(--surface);
   }
 
   .nav-links,
@@ -1000,19 +1067,54 @@ address strong,
 
   .nav-shell.is-open .nav-links {
     display: grid;
+    flex: 0 0 100%;
     width: 100%;
     gap: 0.35rem;
     order: 3;
+    justify-items: stretch;
+    margin-left: 0;
+    margin-top: 0.4rem;
+    padding: 0.7rem;
+    border: 1px solid rgba(29, 120, 116, 0.22);
+    border-radius: 14px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(223, 242, 239, 0.86));
+    box-shadow: 0 18px 38px rgba(7, 30, 34, 0.12);
   }
 
   .nav-shell.is-open .nav-cta {
     display: inline-flex;
+    flex: 0 0 100%;
     width: 100%;
     order: 4;
+    margin-left: 0;
+    margin-top: 0.15rem;
   }
 
   .nav-links a {
     width: 100%;
+    min-height: 44px;
+  }
+
+  .nav-shell.is-open .nav-links a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    justify-self: stretch;
+    width: 100%;
+    inline-size: 100%;
+    max-inline-size: none;
+    padding: 0.75rem 0.85rem;
+    border: 1px solid transparent;
+    background: rgba(255, 255, 255, 0.68);
+  }
+
+  .nav-shell.is-open .nav-links a:hover,
+  .nav-shell.is-open .nav-links a:focus-visible,
+  .nav-shell.is-open .nav-links a[aria-current="page"] {
+    border-color: rgba(29, 120, 116, 0.2);
+    background: var(--surface);
   }
 
   .hero-grid,
@@ -1043,6 +1145,10 @@ address strong,
     padding: 3.2rem 0;
   }
 
+  .container {
+    width: min(var(--container), calc(100% - 1.25rem));
+  }
+
   .brand span {
     white-space: normal;
     font-size: 0.95rem;
@@ -1051,11 +1157,29 @@ address strong,
 
   .hero-copy h1,
   .page-hero h1 {
-    font-size: clamp(2.25rem, 14vw, 3.6rem);
+    font-size: clamp(2rem, 10.5vw, 3rem);
+    line-height: 1.06;
   }
 
   .hero-grid {
     gap: 2rem;
+  }
+
+  .hero-actions,
+  .cta-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hero-actions .btn,
+  .cta-actions .btn,
+  .section-actions .btn,
+  .facebook-shell .btn {
+    width: 100%;
+  }
+
+  .hero-visual {
+    padding: 0.75rem;
   }
 
   .card-grid-large,
@@ -1085,6 +1209,44 @@ address strong,
     align-items: start;
     flex-direction: column;
     gap: 0.25rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .nav-shell {
+    width: min(100% - 0.75rem, 1180px);
+  }
+
+  .brand {
+    gap: 0.55rem;
+    max-width: calc(100% - 56px);
+  }
+
+  .brand img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .brand span {
+    font-size: 0.88rem;
+  }
+
+  .hero-copy h1,
+  .page-hero h1 {
+    font-size: clamp(1.82rem, 9.5vw, 2.55rem);
+  }
+
+  .hero-text,
+  .page-hero p {
+    font-size: 1rem;
+  }
+
+  .activity-board {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-card {
+    min-height: 0;
   }
 }
 
