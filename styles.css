@@ -148,17 +148,18 @@ p {
 }
 
 .nav-shell {
-  width: min(1180px, calc(100% - 1rem));
+  width: min(1280px, calc(100% - 1rem));
   min-height: 76px;
   margin-inline: auto;
   display: flex;
   align-items: center;
-  gap: 0.7rem;
+  gap: 0.55rem;
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
+  flex: 0 0 auto;
   gap: 0.75rem;
   color: var(--ink);
   font-weight: 800;
@@ -185,16 +186,17 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.1rem;
+  flex: 0 1 auto;
+  gap: 0;
   margin-left: auto;
 }
 
 .nav-links a {
   flex: 0 0 auto;
-  padding: 0.58rem 0.58rem;
+  padding: 0.56rem 0.5rem;
   border-radius: var(--radius);
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.86rem;
   font-weight: 700;
   text-decoration: none;
   white-space: nowrap;
@@ -242,10 +244,10 @@ p {
 
 .nav-actions .nav-cta,
 .nav-social-link {
-  min-width: 92px;
+  min-width: 84px;
   min-height: 42px;
-  padding: 0.62rem 0.72rem;
-  font-size: 0.88rem;
+  padding: 0.6rem 0.62rem;
+  font-size: 0.84rem;
 }
 
 .nav-social-link {
@@ -1375,7 +1377,7 @@ address strong,
   transform: translateY(2px);
 }
 
-@media (max-width: 1120px) {
+@media (max-width: 1280px) {
   [id] {
     scroll-margin-top: 118px;
   }
