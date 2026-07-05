@@ -169,9 +169,11 @@ p {
 .brand img {
   width: 50px;
   height: 50px;
+  max-width: 100%;
+  padding: 0.16rem;
   object-fit: contain;
   border: 2px solid rgba(238, 46, 49, 0.18);
-  border-radius: 50%;
+  border-radius: 14px;
   background: var(--surface);
 }
 
@@ -442,9 +444,13 @@ p {
 }
 
 .hero-logo-panel img {
-  width: min(260px, 100%);
+  display: block;
+  width: min(300px, 100%);
+  max-width: 100%;
+  height: auto;
   margin-inline: auto;
   padding: 0.75rem;
+  object-fit: contain;
   border-radius: var(--radius);
   background: var(--surface);
 }
@@ -1143,6 +1149,8 @@ address strong,
 .footer-logo {
   width: 72px;
   height: 72px;
+  max-width: 100%;
+  padding: 0.2rem;
   object-fit: contain;
   margin-bottom: 1rem;
   background: var(--surface);
@@ -1470,7 +1478,7 @@ address strong,
   }
 
   .hero-logo-panel img {
-    width: min(170px, 100%);
+    width: min(220px, 100%);
     padding: 0.5rem;
   }
 
@@ -1779,7 +1787,7 @@ address strong,
   }
 
   .hero-logo-panel img {
-    width: min(148px, 100%);
+    width: min(190px, 100%);
   }
 
   .activity-board {
