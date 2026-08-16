@@ -1172,7 +1172,7 @@ p {
 
 .page-hero-photo img {
   width: 100%;
-  height: clamp(280px, 33vw, 430px);
+  height: clamp(260px, 30vw, 390px);
   object-fit: cover;
 }
 
@@ -1364,7 +1364,7 @@ p {
 
 .impact-photo img {
   height: 100%;
-  min-height: 420px;
+  min-height: 360px;
   object-fit: cover;
 }
 
@@ -1703,7 +1703,7 @@ address strong,
 }
 
 .gallery-card-featured img {
-  height: 345px;
+  height: clamp(280px, 29vw, 330px);
 }
 
 .gallery-card figcaption,
@@ -1722,7 +1722,7 @@ address strong,
 }
 
 .photo-feature img {
-  height: clamp(260px, 36vw, 430px);
+  height: clamp(250px, 32vw, 380px);
 }
 
 .homework-photo {
