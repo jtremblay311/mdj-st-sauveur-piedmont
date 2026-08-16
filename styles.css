@@ -705,7 +705,12 @@ p {
   aspect-ratio: 16 / 10;
   height: auto;
   object-fit: cover;
+  object-position: center;
   transition: transform 220ms ease;
+}
+
+.zone-photo-focus-lower img {
+  object-position: center 68%;
 }
 
 .zone-card-head {
