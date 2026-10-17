@@ -2936,3 +2936,66 @@ html, body {background:#fffaf4}
  .home-feature-grid .feature-panel {padding:1.4rem}
  .moments-mosaic {gap:.7rem}
 }
+
+
+/* Creative direction 04 — bolder photography, purposeful negative space, cleaner navigation */
+:root { --display-tracking:-.063em; }
+.hero.section {padding-top:clamp(5rem,8vw,8.6rem);padding-bottom:clamp(5rem,8vw,8.6rem)}
+.hero-copy {position:relative}
+.hero-copy::before {content:"";display:block;width:70px;height:7px;border-radius:50px;background:#e93e48;margin-bottom:1.75rem}
+.hero-copy h1 {font-size:clamp(3rem,5.05vw,5.6rem);line-height:.99;letter-spacing:var(--display-tracking)}
+.hero-copy .hero-text {max-width:550px;font-weight:460}
+.hero-visual {display:block;padding:0;background:transparent;border:0;box-shadow:none;transform:none;margin:0;overflow:visible}
+.hero-photo-collage {display:grid;grid-template-columns:1.17fr .83fr;grid-template-rows:240px 240px;gap:.8rem;transform:rotate(1.2deg)}
+.hero-photo-collage .photo-frame {margin:0;border:5px solid white;box-shadow:0 18px 38px rgba(16,64,59,.12);border-radius:23px}
+.hero-photo-collage .photo-frame-large {grid-row:1 / span 2}
+.hero-photo-collage .photo-frame img {width:100%;height:100%;object-fit:cover}
+.hero-logo-panel {position:absolute;top:auto;bottom:-2rem;left:-2rem;z-index:5;width:min(350px,70%);padding:.6rem .8rem;box-shadow:0 25px 55px rgba(15,56,59,.20);border:3px solid white;transform:rotate(-3deg)}
+.hero-logo-panel img {width:65px;height:65px;object-fit:contain;padding:.25rem}
+.hero-logo-panel p {font-size:.86rem}
+.hero-floating-badge {top:-1.2rem;right:-1.2rem;background:#f2b56e;color:#153c41;border:3px solid white;transform:rotate(5deg);font-size:.79rem;box-shadow:0 10px 25px rgba(14,53,52,.12)}
+.hero .activity-board {display:none}
+.living-section {padding-top:clamp(6rem,9vw,9.5rem)}
+.living-panel h2 {font-size:clamp(2.45rem,4.2vw,4.3rem);letter-spacing:-.06em;line-height:1.03}
+.living-panel > div:last-child > p:first-child {font-size:1.12rem}
+.zone-map {isolation:isolate}
+.zone-card {overflow:hidden}
+.zone-photo {margin:-.4rem -.4rem 1rem;overflow:hidden;border-radius:16px 16px 10px 10px}
+.zone-card-head h3 {font-size:clamp(1.25rem,1.7vw,1.75rem)}
+.zone-card .zone-icon {font-size:.72rem;letter-spacing:.04em}
+.zone-card li {font-size:.93rem}
+.moments-section {position:relative;overflow:hidden}
+.moments-section::before {content:"";position:absolute;left:-180px;top:50px;width:340px;height:340px;border:65px solid rgba(255,175,91,.15);border-radius:50%;pointer-events:none}
+.moments-mosaic .moment-card:nth-child(2) {transform:translateY(-12px)}
+.moments-mosaic .moment-card:nth-child(4) {transform:translateY(12px)}
+.home-feature-grid .feature-panel:nth-child(1) .eyebrow,.home-feature-grid .feature-panel:nth-child(2) .eyebrow,.home-feature-grid .feature-panel:nth-child(3) .eyebrow {color:#9c3344}
+.home-feature-grid .feature-panel h2 {letter-spacing:-.05em;line-height:1.12}
+.facebook-shell h2 {max-width:750px}
+.page-hero .eyebrow {display:inline-flex;align-items:center;gap:.6rem}
+.page-hero .eyebrow::before {content:"";width:22px;height:3px;background:#df4754;border-radius:2px}
+.page-hero-photo {transform:rotate(1.3deg)}
+.site-footer {border-top:8px solid #efb773}
+@media (max-width:1059px) {
+ .hero-photo-collage {grid-template-rows:200px 200px}
+ .hero-logo-panel {left:-.5rem;bottom:-1.1rem}
+}
+@media (max-width:850px) {
+ .hero.section {padding-top:4rem;padding-bottom:5rem}
+ .hero-photo-collage {grid-template-rows:200px 200px;transform:none}
+ .hero-floating-badge {top:-.7rem;right:-.3rem;transform:rotate(3deg)}
+ .hero-logo-panel {left:.25rem;bottom:-1.6rem;transform:rotate(-2deg)}
+ .moments-mosaic .moment-card:nth-child(2),.moments-mosaic .moment-card:nth-child(4) {transform:none}
+ .page-hero-photo {transform:none}
+}
+@media (max-width:480px) {
+ .hero-copy::before {width:48px;height:5px;margin-bottom:1.15rem}
+ .hero-copy h1 {font-size:clamp(1.91rem,7.13vw,2.45rem);letter-spacing:-.048em;line-height:1.07}
+ .hero-photo-collage {grid-template-rows:150px 150px;gap:.45rem}
+ .hero-photo-collage .photo-frame {border-width:3px;border-radius:13px}
+ .hero-logo-panel {width:min(270px,82%);padding:.42rem .55rem}
+ .hero-logo-panel img {width:48px;height:48px}
+ .hero-logo-panel p {font-size:.7rem}
+ .hero-floating-badge {font-size:.64rem;max-width:160px}
+ .living-section {padding-top:4.5rem}
+ .living-panel h2 {font-size:clamp(2rem,8vw,2.8rem)}
+}
