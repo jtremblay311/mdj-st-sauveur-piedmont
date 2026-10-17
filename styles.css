@@ -2595,3 +2595,203 @@ address strong,
     transition: none !important;
   }
 }
+
+
+/* ============================================================
+   MDJ visual refresh | premium editorial direction | Oct 2026
+   Original structure, identity, logos and content preserved.
+   ============================================================ */
+:root {
+  --paper: #f7faf9;
+  --surface: #ffffff;
+  --surface-warm: #edf5f2;
+  --ink: #102c30;
+  --muted: #52696b;
+  --line: #dce8e5;
+  --teal: #207a72;
+  --teal-dark: #102c30;
+  --soft-teal: #edf6f3;
+  --soft-peach: #fff1e8;
+  --shadow: 0 26px 70px rgba(12, 43, 46, .10);
+  --radius: 18px;
+  --container: 1200px;
+}
+html {
+  background: #f7faf9;
+  font-family: "Inter", "Avenir Next", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-optical-sizing: auto;
+}
+body { background: #f7faf9; }
+p { line-height: 1.75; }
+.container { width: min(var(--container), calc(100% - 3rem)); }
+.section { padding: clamp(4.5rem, 7.8vw, 7.5rem) 0; }
+.site-header {
+  background: rgba(255, 255, 255, .96);
+  border-color: rgba(16,44,48,.07);
+  box-shadow: 0 5px 30px rgba(16,44,48,.045);
+  backdrop-filter: blur(18px);
+}
+.nav-shell { min-height: 84px; width: min(1420px, calc(100% - 2.5rem)); gap: .9rem; }
+.brand { letter-spacing: -.035em; font-size: .96rem; }
+.brand img { width: 53px; height: 53px; border: 1px solid rgba(16,44,48,.08); border-radius: 15px; padding: .1rem; }
+.nav-links a { font-weight: 650; color: #475f61; border-radius: 10px; }
+.nav-links a[aria-current="page"] { color: var(--ink); background: #eaf5f1; }
+.nav-cta, .btn-primary { background: #e72c35; box-shadow: 0 12px 30px rgba(231,44,53,.16); }
+.btn, .nav-cta, .nav-social-link { border-radius: 999px; letter-spacing: -.01em; }
+.btn { padding: .95rem 1.45rem; min-height: 50px; }
+.btn:hover, .nav-cta:hover, .nav-social-link:hover { transform: translateY(-3px); }
+.eyebrow { font-size: .76rem; letter-spacing: .14em; font-weight: 850; color: #cb313a; }
+.hero, .page-hero {
+  background: #f4f8f6;
+  border-bottom: 1px solid #e6eeeb;
+}
+.hero::before {
+  inset: -20% -10% auto auto;
+  width: 55%;
+  height: 105%;
+  border-radius: 50%;
+  transform: none;
+  background: radial-gradient(circle, rgba(73,152,138,.14), transparent 70%);
+}
+.hero::after { opacity: .18; }
+.hero.section { padding: clamp(4.4rem, 7vw, 8rem) 0; }
+.hero-grid { gap: clamp(2rem, 5vw, 6rem); grid-template-columns: minmax(0, 1.08fr) minmax(0,.92fr); }
+.hero-copy h1 {
+  max-width: 800px;
+  font-size: clamp(2.8rem, 5vw, 5.35rem);
+  line-height: 1.02;
+  letter-spacing: -.055em;
+  font-weight: 870;
+  text-wrap: balance;
+}
+.hero-title-location { letter-spacing: -.06em; }
+.hero-text, .page-hero p { max-width: 610px; font-size: clamp(1.03rem, 1.35vw, 1.19rem); line-height: 1.75; }
+.hero-actions { margin-top: 2rem; }
+.hero-highlights span, .living-statements span {
+  box-shadow: none; background: rgba(255,255,255,.8);
+  border-color: rgba(16,44,48,.09);
+  font-weight: 730; font-size: .83rem; padding: .5rem .85rem;
+}
+.hero-visual {
+  padding: .75rem;
+  gap: .75rem;
+  background: #fff;
+  border: 1px solid rgba(16,44,48,.08);
+  border-radius: 28px;
+  box-shadow: 0 36px 90px rgba(13,56,55,.16);
+  backdrop-filter: none;
+}
+.hero-logo-panel { border-radius: 18px; background: #153f43; }
+.hero-photo-collage { gap: .6rem; }
+.photo-frame, .page-hero-photo, .gallery-card, .moment-card, .living-photo, .impact-photo {
+  overflow: hidden; border-radius: 18px;
+}
+.hero-photo-collage img, .moment-card img, .gallery-card img, .page-hero-photo img, .experience-photo img {
+  transition: transform .7s cubic-bezier(.19,1,.22,1);
+}
+@media (hover: hover) {
+  .moment-card:hover img, .gallery-card:hover img, .experience-item:hover img { transform: scale(1.045); }
+}
+.section-heading { max-width: 790px; margin-bottom: clamp(2rem,4vw,3.4rem); }
+.section-heading h2, .two-column h2, .feature-panel h2, .facebook-shell h2, .cta-shell h2,
+.notice-panel h2, .contact-info h2, .hours-panel h2, .contact-form h2, .map-panel h2 {
+  font-size: clamp(2.1rem, 4.25vw, 4rem);
+  line-height: 1.07;
+  letter-spacing: -.055em;
+  font-weight: 830;
+  text-wrap: balance;
+}
+.section-heading p { max-width: 660px; }
+.living-section { background: #fff; }
+.living-panel {
+  border-radius: 28px;
+  border: 1px solid rgba(16,44,48,.08);
+  box-shadow: 0 26px 80px rgba(16,44,48,.085);
+  overflow: hidden;
+}
+.living-panel h2 { letter-spacing: -.05em; }
+.activities-section {
+  background: #f1f7f4;
+  border-top: 1px solid #e5eee9;
+  border-bottom: 1px solid #e5eee9;
+}
+.zone-card {
+  background: #fff;
+  border: 1px solid #deebe6;
+  border-radius: 20px;
+  box-shadow: 0 8px 28px rgba(16,44,48,.035);
+  transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+.zone-card-music { background: #fff; color: var(--ink); }
+.zone-card-music h3, .zone-card-music p, .zone-card-music li { color: inherit; }
+.zone-card:hover { transform: translateY(-5px); box-shadow: 0 22px 50px rgba(16,44,48,.11); border-color: #b6d4c9; }
+.zone-icon { border-radius: 14px; }
+.zone-card-head h3 { letter-spacing: -.035em; font-weight: 800; }
+.zone-card li { line-height: 1.6; }
+.moments-section { background: #fff; }
+.moments-mosaic { gap: 1rem; }
+.moment-card { border-radius: 22px; }
+.moment-card figcaption, .photo-frame figcaption {
+  border-radius: 999px;
+  font-weight: 750;
+  letter-spacing: .01em;
+}
+.feature-panel, .value-card, .sponsor-card, .alpha-service-card,
+.notice-panel, .hours-panel, .contact-info, .contact-form, .map-panel {
+  border-radius: 22px;
+  border: 1px solid #e0ebe7;
+  box-shadow: 0 12px 42px rgba(16,44,48,.05);
+}
+.feature-panel, .value-card, .sponsor-card { padding: clamp(1.3rem, 2.1vw, 2.15rem); }
+.home-feature-grid, .feature-grid, .card-grid, .sponsor-grid { gap: 1.2rem; }
+.page-hero.section { padding: clamp(4rem, 6.4vw, 7rem) 0; }
+.page-hero h1 {
+  font-size: clamp(3rem, 5.9vw, 6rem);
+  font-weight: 850;
+  line-height: 1.02;
+  letter-spacing: -.06em;
+  text-wrap: balance;
+}
+.page-hero-photo { border-radius: 26px; box-shadow: 0 30px 80px rgba(16,44,48,.13); }
+.experience-list { gap: clamp(2rem,4vw,4.5rem); }
+.experience-item { border-radius: 26px; overflow: hidden; border: 1px solid #e0ebe7; box-shadow: 0 18px 55px rgba(16,44,48,.06); }
+.experience-item h3 { letter-spacing: -.04em; }
+.experience-photo { overflow: hidden; }
+.partner-spotlight, .impact-story, .about-community-panel, .alpha-contact-panel { border-radius: 28px; }
+.facebook-band { background: #12373b; }
+.facebook-shell h2, .cta-shell h2 { letter-spacing: -.045em; }
+.final-cta { background: #f0f5f2; }
+.cta-shell { border-radius: 30px; }
+.site-footer { background: #0e292e; }
+.footer-signature { border-top: 1px solid rgba(255,255,255,.12); }
+.footer-signature a { text-underline-offset: .32em; }
+input, textarea { border-radius: 12px; }
+:focus-visible { outline: 3px solid #e72c35; outline-offset: 4px; }
+@media (max-width: 1200px) {
+  .nav-shell { width: min(100% - 2rem, 1200px); }
+}
+@media (max-width: 850px) {
+  .container { width: min(100% - 2rem, 680px); }
+  .section { padding: 4.2rem 0; }
+  .hero.section, .page-hero.section { padding: 3.7rem 0 4.3rem; }
+  .hero-grid { grid-template-columns: 1fr; gap: 2.25rem; }
+  .hero-copy h1 { font-size: clamp(2.35rem, 7.8vw, 4.2rem); letter-spacing: -.045em; }
+  .page-hero h1 { font-size: clamp(2.7rem, 8.2vw, 4.3rem); }
+  .section-heading h2, .two-column h2, .feature-panel h2, .facebook-shell h2, .cta-shell h2 { font-size: clamp(2.1rem, 6vw, 3.4rem); }
+  .hero-visual { border-radius: 22px; }
+}
+@media (max-width: 480px) {
+  .container { width: calc(100% - 1.5rem); }
+  .section { padding: 3.3rem 0; }
+  .hero.section, .page-hero.section { padding: 3rem 0 3.5rem; }
+  .hero-copy h1 { font-size: clamp(1.95rem, 7.15vw, 2.45rem); letter-spacing: -.055em; line-height: 1.09; }
+  .hero-title-line { white-space: normal; }
+  .hero-title-location { white-space: nowrap; font-size: .88em; }
+  .page-hero h1 { font-size: clamp(2.35rem, 9vw, 3rem); }
+  .section-heading h2, .two-column h2, .facebook-shell h2, .cta-shell h2 { font-size: clamp(2rem, 8.5vw, 2.7rem); }
+  .hero-highlights { gap: .4rem; }
+  .hero-highlights span { font-size: .75rem; }
+  .moment-card { border-radius: 16px; }
+  .zone-card, .feature-panel, .value-card, .sponsor-card { border-radius: 18px; }
+  .nav-shell { width: calc(100% - 1.5rem); }
+}
