@@ -3248,3 +3248,49 @@ html,body{background:#f5f0e7;color:var(--ink)}
   border-radius:0 0 19px 19px!important;
  }
 }
+
+
+/* Simplified navigation: no nested dropdown or floating secondary panels */
+.nav-links .nav-mobile-contact {display:none!important}
+@media (min-width: 1401px) {
+ .site-header .nav-shell {gap:.7rem}
+ .site-header .nav-links {display:flex!important;gap:0;flex-direction:row;position:static;align-items:center;padding:0;margin-left:auto;background:none;box-shadow:none;border:0}
+ .site-header .nav-links>a {padding:.65rem .63rem;font-size:.82rem;white-space:nowrap}
+ .site-header .nav-links .nav-mobile-contact {display:none!important}
+ .site-header .nav-toggle {display:none!important}
+ .site-header .nav-actions {display:flex!important}
+}
+@media (max-width: 1400px) {
+ .site-header .nav-shell {position:relative;min-height:74px}
+ .site-header .nav-toggle {display:block!important;order:3;margin-left:auto}
+ .site-header .nav-actions {display:flex;order:2;margin-left:auto}
+ .site-header .nav-shell:not(.is-open)>.nav-links {display:none!important}
+ .site-header .nav-shell.is-open>.nav-links {
+  display:flex!important;position:absolute!important;top:100%!important;
+  left:auto!important;right:0!important;width:min(390px,calc(100vw - 24px))!important;
+  max-width:calc(100vw - 24px)!important;max-height:calc(100dvh - 80px)!important;
+  overflow-y:auto!important;overflow-x:hidden!important;box-sizing:border-box!important;
+  margin:0!important;padding:14px!important;gap:3px!important;
+  flex-direction:column!important;align-items:stretch!important;
+  background:#fffaf3!important;border:1px solid #d6e3da!important;
+  border-radius:0 0 22px 22px!important;box-shadow:0 25px 65px rgba(4,47,52,.24)!important;
+  z-index:200!important;
+ }
+ .site-header .nav-shell.is-open>.nav-links>a {
+  display:flex!important;align-items:center!important;justify-content:flex-start!important;
+  width:100%!important;min-height:44px!important;padding:12px 14px!important;
+  border-radius:12px!important;box-sizing:border-box!important;
+  font-size:.95rem!important;font-weight:740!important;
+ }
+ .site-header .nav-shell.is-open>.nav-links .nav-mobile-contact {
+  display:flex!important;justify-content:center!important;
+  background:#e5444c!important;color:#fff!important;
+  border-radius:999px!important;margin-top:8px!important;
+ }
+}
+@media (max-width: 620px) {
+ .site-header .nav-actions {display:none!important}
+ .site-header .nav-shell.is-open>.nav-links {
+  left:-12px!important;right:-12px!important;width:calc(100% + 24px)!important;max-width:none!important;
+ }
+}
