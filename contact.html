@@ -12,28 +12,34 @@
     <a class="skip-link" href="#main">Aller au contenu</a>
     <header class="site-header">
       <nav class="nav-shell" aria-label="Navigation principale">
-        <a class="brand" href="index.html" aria-label="MDJ St-Sauveur / Piedmont - accueil">
+        <a class="brand" href="index.html" aria-label="MDJ St-Sauveur / Piedmont — accueil">
           <img src="public/images/logo-mdj-simple.jpg" alt="Logo de la MDJ St-Sauveur / Piedmont">
-          <span>MDJ St-Sauveur / Piedmont</span>
+          <span>MDJ <small>St-Sauveur / Piedmont</small></span>
         </a>
         <button class="nav-toggle" type="button" aria-controls="site-menu" aria-expanded="false">
           <span class="sr-only">Ouvrir le menu</span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
         </button>
         <div class="nav-links" id="site-menu">
           <a href="index.html">Accueil</a>
           <a href="ta-mdj.html">Ta MDJ</a>
           <a href="aide-aux-devoirs.html">Aide aux devoirs</a>
-          <a href="alpha-laurentides.html">Alpha Laurentides</a>
-          <a href="commanditaires.html">Commanditaires</a>
+          <details class="nav-more">
+            <summary>Découvrir <span aria-hidden="true">⌄</span></summary>
+            <div class="nav-dropdown">
+              <a href="alpha-laurentides.html">Alpha Laurentides</a>
+              <a href="commanditaires.html">Commanditaires</a>
+              <div class="nav-dropdown-social">
+                <a href="https://www.facebook.com/MDJSSP/?locale=fr_FR" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+                <a href="https://www.instagram.com/mdjsaintsauveurpiedmont?igsh=MXV3YW92Z3VvaHJkeQ==" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+              </div>
+            </div>
+          </details>
           <a href="a-propos.html">À propos</a>
-          <a href="contact.html" aria-current="page">Contact</a>
+          <a class="nav-mobile-contact" aria-current="page" href="contact.html">Nous joindre</a>
         </div>
         <div class="nav-actions">
-          <a class="nav-cta" href="https://www.facebook.com/MDJSSP/?locale=fr_FR" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a class="nav-social-link" href="https://www.instagram.com/mdjsaintsauveurpiedmont?igsh=MXV3YW92Z3VvaHJkeQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram officiel de la MDJ St-Sauveur / Piedmont">Instagram</a>
+          <a class="nav-cta" aria-current="page" href="contact.html">Nous joindre <span aria-hidden="true">↗</span></a>
         </div>
       </nav>
     </header>
