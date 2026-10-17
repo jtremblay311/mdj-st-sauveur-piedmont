@@ -3071,3 +3071,57 @@ html,body{background:#f5f0e7;color:var(--ink)}
  .activities-section{background:#c1ddd1}
  .moments-section .section-heading p{color:#e9f4ef}
 }
+
+
+/* Navigation premium | 2026 */
+.site-header{z-index:100;background:rgba(250,247,239,.96);border-bottom:1px solid rgba(10,59,61,.12);box-shadow:0 12px 36px rgba(14,45,48,.07)}
+.nav-shell{width:min(1380px,calc(100% - 3rem));min-height:88px;gap:clamp(1rem,2vw,2.3rem)}
+.brand{gap:.7rem;font-size:1rem;letter-spacing:-.045em;line-height:1.05;color:#14383e}
+.brand img{width:56px;height:56px;border:0;border-radius:16px;box-shadow:0 6px 14px rgba(8,56,58,.1);background:#fff}
+.brand span{display:grid;gap:.22rem;white-space:normal;font-weight:900}
+.brand small{display:block;font-size:.73rem;font-weight:700;letter-spacing:-.01em;color:#4e7471;white-space:nowrap}
+.nav-links{gap:.15rem;align-items:center}
+.nav-links>a,.nav-more>summary{font-size:.87rem;font-weight:760;letter-spacing:-.012em;padding:.78rem .9rem;color:#244c4e;border-radius:13px;text-decoration:none;white-space:nowrap}
+.nav-links>a:hover,.nav-more>summary:hover,.nav-links>a[aria-current="page"],.nav-more>summary.has-current{color:#0b5255;background:#d8eee4}
+.nav-more{position:relative;z-index:15}
+.nav-more>summary{display:flex;align-items:center;gap:.5rem;list-style:none;cursor:pointer;user-select:none}
+.nav-more>summary::-webkit-details-marker{display:none}
+.nav-more>summary span{font-size:1.2rem;line-height:.7;transition:transform .2s}
+.nav-more[open]>summary span{transform:rotate(180deg)}
+.nav-dropdown{position:absolute;top:calc(100% + 13px);right:-30px;min-width:252px;padding:.55rem;border:1px solid #d5e2da;border-radius:20px;background:#fffdf9;box-shadow:0 22px 65px rgba(5,46,50,.2);display:grid;gap:.12rem}
+.nav-dropdown::before{content:"";position:absolute;height:14px;top:-14px;left:0;right:0}
+.nav-dropdown>a{padding:.9rem 1rem;font-size:.87rem;color:#244c4e;font-weight:750;border-radius:11px;text-decoration:none}
+.nav-dropdown>a:hover,.nav-dropdown>a[aria-current="page"]{background:#e1f2e9;color:#0a585d}
+.nav-dropdown-social{border-top:1px solid #e0e8e0;margin-top:.4rem;padding:.65rem .3rem .3rem;display:flex;justify-content:space-between;gap:.35rem}
+.nav-dropdown-social a{font-size:.75rem;font-weight:750;color:#0c666b;text-decoration:none;padding:.3rem}
+.nav-dropdown-social a:hover{text-decoration:underline}
+.nav-actions{margin-left:.35rem}
+.nav-actions .nav-cta{min-height:46px;min-width:0;padding:.81rem 1.2rem;border:0;border-radius:999px;background:#e5444c;color:white;white-space:nowrap;font-size:.85rem;font-weight:820;box-shadow:0 10px 23px rgba(202,45,61,.2)}
+.nav-cta span{margin-left:.35rem;font-size:1.05rem}
+.nav-mobile-contact{display:none!important}
+.nav-toggle{border-radius:12px}
+@media(max-width:1150px){
+ .nav-shell{min-height:74px;flex-wrap:nowrap;gap:.75rem}
+ .brand{margin-right:auto}
+ .nav-toggle{display:block;flex:0 0 auto;margin-left:auto;order:3}
+ .nav-actions{display:flex;margin-left:auto;order:2}
+ .nav-shell>.nav-links{display:none!important}
+ .nav-shell.is-open>.nav-links{display:flex!important;position:absolute;top:100%;left:0;right:0;max-height:calc(100dvh - 74px);overflow-y:auto;flex-direction:column;align-items:stretch;gap:.15rem;padding:1rem max(1rem,calc((100vw - 900px)/2));margin:0;background:#fffaf3;border-top:1px solid #dce7de;box-shadow:0 24px 40px rgba(8,52,56,.18)}
+ .nav-shell.is-open>.nav-links>a,.nav-shell.is-open .nav-more>summary{min-height:48px;display:flex;align-items:center;padding:.88rem 1rem;font-size:1rem}
+ .nav-shell.is-open .nav-more{width:100%}
+ .nav-shell.is-open .nav-more>summary{justify-content:space-between}
+ .nav-dropdown{position:static;min-width:0;padding:.4rem;margin:.2rem 0 .7rem;border:1px solid #e3e9e0;border-radius:14px;box-shadow:none;background:#f5f5ed}
+ .nav-dropdown::before{display:none}
+ .nav-dropdown>a{padding:.85rem 1rem}
+ .nav-shell.is-open .nav-mobile-contact{display:flex!important;background:#d9eee2;color:#0b5157}
+}
+@media(max-width:620px){
+ .nav-shell{width:calc(100% - 1.5rem);min-height:69px}
+ .brand img{width:44px;height:44px}
+ .brand{gap:.55rem;font-size:.92rem}
+ .brand small{font-size:.64rem}
+ .nav-actions{display:none}
+ .nav-toggle{order:2}
+ .nav-shell.is-open>.nav-links{max-height:calc(100dvh - 69px)}
+}
+@media(max-width:370px){.brand{font-size:.84rem}.brand small{font-size:.57rem}}
