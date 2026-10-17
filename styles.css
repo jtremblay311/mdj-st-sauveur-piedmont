@@ -3125,3 +3125,27 @@ html,body{background:#f5f0e7;color:var(--ink)}
  .nav-shell.is-open>.nav-links{max-height:calc(100dvh - 69px)}
 }
 @media(max-width:370px){.brand{font-size:.84rem}.brand small{font-size:.57rem}}
+
+
+/* Correction: dropdown "Découvrir" — desktop et mobile */
+.site-header,.nav-shell,.nav-links,.nav-more {overflow:visible}
+.nav-links {flex:0 1 auto;min-width:0}
+.nav-more {display:block;flex:0 0 auto;align-self:center}
+.nav-more>summary {height:44px;min-width:120px;display:inline-flex;justify-content:center;align-items:center;gap:.55rem;box-sizing:border-box}
+.nav-more>summary span {display:inline-block;line-height:1;font-size:1.08rem}
+.nav-more[open]>summary {color:#0b5255;background:#d8eee4}
+.nav-more:not([open])>.nav-dropdown {display:none!important}
+.nav-more[open]>.nav-dropdown {display:flex!important;flex-direction:column;align-items:stretch;z-index:200}
+.nav-more .nav-dropdown>a {display:block;white-space:normal;width:100%;line-height:1.35}
+.nav-more .nav-dropdown-social {display:flex;flex-direction:row;flex-wrap:wrap;align-items:center}
+.nav-more .nav-dropdown-social a {display:inline-block;white-space:nowrap}
+@media(min-width:1151px) {
+  .nav-more[open]>.nav-dropdown {position:absolute;top:calc(100% + 8px);left:50%;right:auto;transform:translateX(-50%);width:270px;max-width:min(320px,calc(100vw - 32px))}
+}
+@media(max-width:1150px) {
+  .nav-shell.is-open>.nav-links {width:100%;box-sizing:border-box}
+  .nav-shell.is-open .nav-more {display:block;align-self:stretch;width:100%}
+  .nav-shell.is-open .nav-more>summary {display:flex;width:100%;height:auto;min-height:48px;justify-content:space-between}
+  .nav-more[open]>.nav-dropdown {position:static;transform:none;width:100%;max-width:100%;margin:.25rem 0 .6rem;box-sizing:border-box}
+  .nav-shell.is-open .nav-more .nav-dropdown>a {display:block;min-height:44px;padding:.8rem .9rem}
+}
