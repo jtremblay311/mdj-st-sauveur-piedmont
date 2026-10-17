@@ -2999,3 +2999,75 @@ html, body {background:#fffaf4}
  .living-section {padding-top:4.5rem}
  .living-panel h2 {font-size:clamp(2rem,8vw,2.8rem)}
 }
+
+
+/* Palette 2026 — rich petrol, saturated teal and warm coral. */
+:root {
+ --paper:#f5f0e7;
+ --surface:#fffdfa;
+ --surface-warm:#e8e1d4;
+ --ink:#102d32;
+ --muted:#496066;
+ --line:#d7dfd9;
+ --teal:#006f73;
+ --teal-dark:#103a40;
+ --soft-teal:#c5e7db;
+ --soft-peach:#f4c6a3;
+ --peach:#f1aa73;
+ --red:#e5444c;
+ --green:#257d70;
+}
+html,body{background:#f5f0e7;color:var(--ink)}
+.site-header{background:rgba(255,252,246,.97);border-bottom:1px solid #c9d9d2}
+.nav-links a[aria-current="page"]{background:#cce8df;color:#104b50}
+.hero{background:linear-gradient(120deg,#ead1b7 0%,#f0d9c1 39%,#83c1ab 100%)}
+.hero::before{background:radial-gradient(circle,rgba(0,96,99,.28),transparent 70%)}
+.hero-copy .eyebrow{color:#a12538}
+.hero-copy h1{color:#092f36}
+.hero-highlights span:nth-child(1){background:#126c70;border-color:#126c70;color:white}
+.hero-highlights span:nth-child(2){background:#d34b50;border-color:#d34b50;color:white}
+.hero-highlights span:nth-child(3){background:#edaf64;border-color:#e3a456;color:#20383b}
+.hero-floating-badge{background:#f0aa68;color:#123940}
+.hero-logo-panel{background:#10363c}
+.living-section{background:#e9e0d5}
+.living-panel{background:linear-gradient(140deg,#07565c,#0a7672 62%,#11615b);box-shadow:18px 24px 0 #c3d8cd,0 30px 70px rgba(6,61,65,.18)}
+.activities-section{background:#badbd0}
+.activities-section .section-heading h2{color:#103b40}
+.zone-intro{background:linear-gradient(145deg,#0d3e47,#12616a);box-shadow:0 22px 60px rgba(8,50,57,.22)}
+.zone-intro .zone-badge{background:#d6474a;color:white}
+.zone-map .zone-card:nth-child(1){background:#fff0de}
+.zone-map .zone-card:nth-child(2){background:#edbc91}
+.zone-map .zone-card:nth-child(3){background:#d6e9c8}
+.zone-map .zone-card:nth-child(4){background:#f3b4aa}
+.zone-map .zone-card:nth-child(5){background:#bfdfec}
+.zone-map .zone-card:nth-child(6){background:#f0d59b}
+.zone-card{box-shadow:0 12px 30px rgba(9,67,66,.12)}
+.zone-card .zone-icon{background:#0b4e54!important}
+.section-photo-strip .photo-frame{box-shadow:0 18px 42px rgba(9,65,63,.14)}
+.moments-section{background:#18494e}
+.moments-section .section-heading h2,.moments-section .section-heading p{color:#fff7ed}
+.moments-section .section-heading .eyebrow{color:#ffc27e}
+.moments-section .moment-card{border-color:#f7f0e5;box-shadow:0 15px 45px rgba(4,31,34,.28)}
+.moments-section::before{border-color:rgba(242,171,111,.12)}
+.home-feature-grid .feature-panel:nth-child(1){background:#efa967}
+.home-feature-grid .feature-panel:nth-child(2){background:#a9d5c1}
+.home-feature-grid .feature-panel:nth-child(3){background:#e9a7a2}
+.home-feature-grid .feature-panel h2{color:#18353b}
+.home-feature-grid .feature-panel p:not(.eyebrow){color:#354c50}
+.facebook-band{background:#0b333b}
+.final-cta{background:#b2d5c5}
+.cta-shell{background:linear-gradient(125deg,#103c44,#0b5961)}
+.page-hero,.page-hero-visual{background:linear-gradient(115deg,#dfbaa1 0%,#edd8c5 48%,#99cbb7 100%)}
+.page-hero h1{color:#12363c}
+.page-hero-photo{box-shadow:18px 20px 0 #4a9c88,0 30px 70px rgba(12,55,58,.17)}
+.experience-item:nth-child(odd){background:#c2dfd0}
+.experience-item:nth-child(even){background:#f1c59e}
+.sponsor-grid .sponsor-card:nth-child(3n+1),.alpha-service-card:nth-child(3n+1){background:#c0dfd0}
+.sponsor-grid .sponsor-card:nth-child(3n+2),.alpha-service-card:nth-child(3n+2){background:#f1c9a0}
+.sponsor-grid .sponsor-card:nth-child(3n),.alpha-service-card:nth-child(3n){background:#edb9b5}
+.site-footer{background:#0b3038;border-top:8px solid #e1a15d}
+@media(max-width:850px){
+ .hero{background:linear-gradient(155deg,#efdbc8,#b6d9c8)}
+ .activities-section{background:#c1ddd1}
+ .moments-section .section-heading p{color:#e9f4ef}
+}
