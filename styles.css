@@ -3294,3 +3294,13 @@ html,body{background:#f5f0e7;color:var(--ink)}
   left:-12px!important;right:-12px!important;width:calc(100% + 24px)!important;max-width:none!important;
  }
 }
+
+/* One contact CTA per viewport: desktop header OR compact navigation */
+@media (max-width: 1400px) {
+  .site-header .nav-shell > .nav-actions { display: none !important; }
+  .site-header .nav-shell > .nav-toggle { margin-left: auto; }
+}
+@media (min-width: 1401px) {
+  .site-header .nav-shell > .nav-actions { display: flex !important; }
+  .site-header .nav-links > .nav-mobile-contact { display: none !important; }
+}
